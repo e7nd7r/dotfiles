@@ -1,7 +1,7 @@
 # Dotfiles management with GNU Stow
 
 # List all packages
-packages := "zsh tmux ghostty aerospace bat zfz yazi claude"
+packages := "zsh tmux ghostty aerospace bat zfz yazi claude nvim"
 
 # Default: show available commands
 default:
@@ -60,3 +60,16 @@ status:
         echo "\n=== $pkg ==="; \
         stow -v -t ~ -n $pkg 2>&1 || true; \
     done
+
+# Initialize submodules (needed after fresh clone)
+submodule-init:
+    git submodule update --init --recursive
+
+# Update all submodules to latest
+submodule-update:
+    git submodule update --remote --merge
+    @echo "Don't forget to commit the submodule reference update!"
+
+# Full clone setup (submodules + brew + stow)
+bootstrap: submodule-init brew-install install
+    @echo "Bootstrap complete!"
