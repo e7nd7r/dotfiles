@@ -1,0 +1,7 @@
+[user]
+	email = me@estebandorador.dev
+	name = Esteban Dorador
+[init]
+	defaultbranch = main
+[core]
+	editor = nvim

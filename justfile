@@ -1,7 +1,7 @@
 # Dotfiles management with GNU Stow
 
 # List all packages
-packages := "zsh tmux ghostty aerospace bat zfz yazi claude nvim"
+packages := "zsh tmux ghostty aerospace bat zfz yazi claude nvim starship git btop fzf zed zellij"
 
 # Default: show available commands
 default:
