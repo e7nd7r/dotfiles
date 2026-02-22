@@ -16,24 +16,17 @@ Before creating a PR:
 
 ## Step 1: Commit Pending Changes
 
-If there are uncommitted changes, use the `/commit` skill to create a proper commit:
+If there are uncommitted changes, **invoke the `/commit` skill** using the Skill tool. Do NOT run git commit commands directly - the commit skill ensures proper format and validation.
 
 ```
 /commit
 ```
 
-The commit skill handles:
-- Reviewing changes with `git status` and `git diff`
-- Running tests before committing
-- Creating two-part commit messages
-- Checking for sensitive files
-
-**Pergamini commit format**: Use `[CARD-ID]` prefix in commit messages:
-```bash
-git commit -m "[CARD-ID] Short description" -m "Detailed explanation"
-```
-
-**Important:** Do NOT add `Co-Authored-By` or `Generated with` footers to commit messages.
+**IMPORTANT:** You must actually invoke the skill, not just follow its documentation manually. The `/commit` skill enforces:
+- `[CARD-ID]` prefix in commit messages
+- Two-part commits with separate `-m` flags
+- No `Co-Authored-By` or `Generated with` footers
+- Test execution before committing
 
 ## Step 2: Local CI Verification
 
