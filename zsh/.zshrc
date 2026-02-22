@@ -108,6 +108,7 @@ source $HOME/aliases.sh
 
 # >>> Path Setup >>>
 # export PATH='/Users/esteban/.luarocks/bin:/Users/esteban/.pyenv/shims:/Users/esteban/.nvm/versions/node/v20.17.0/bin:/Users/esteban/miniforge3/condabin:/Users/esteban/bin:/usr/local/bin:/Users/esteban/go/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/usr/local/go/bin:/Users/esteban/.cargo/bin:/Applications/iTerm.app/Contents/Resources/utilities:/Users/esteban/.local/bin:/Users/esteban/flutter/bin:/Users/esteban/.pub-cache/bin'
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # >>> Conda Setup >>>
 # !! Contents within this block are managed by 'conda init' !!
