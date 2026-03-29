@@ -1,7 +1,7 @@
 # Dotfiles management with GNU Stow
 
 # List all packages
-packages := "zsh tmux ghostty aerospace sketchybar bat zfz yazi claude nvim starship git btop fzf zed zellij"
+packages := "zsh tmux ghostty aerospace sketchybar bat zfz yazi claude nvim starship git btop fzf zed zellij opencode"
 
 # Default: show available commands
 default:
@@ -49,8 +49,20 @@ brew-install:
 brew-check:
     brew bundle check --file=Brewfile || brew bundle list --file=Brewfile
 
-# Full setup: install brew packages and dotfiles
-setup: brew-install install
+# Start background services (sketchybar, etc.)
+services:
+    @echo "Starting services..."
+    brew services start sketchybar
+    @echo "Services started!"
+
+# Stop background services
+services-stop:
+    @echo "Stopping services..."
+    brew services stop sketchybar
+    @echo "Services stopped!"
+
+# Full setup: install brew packages, dotfiles, and start services
+setup: brew-install install services
     @echo "Setup complete!"
 
 # Show status of symlinks
