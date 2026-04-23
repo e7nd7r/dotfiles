@@ -265,6 +265,7 @@ done
 
 eval "$(starship init zsh)"
 
+claude() { printf '\e[2J\e[3J\e[H'; command claude "$@"; }
 
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
